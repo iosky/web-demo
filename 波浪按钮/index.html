@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>presto</title>
+  </head>
+  <body>
+    <a href="#" id="btn">button</a>
+  </body>
+
+  <script>
+    let btn = document.querySelector('#btn')
+    btn.addEventListener('click', e => {
+      let offsetLeft = e.target.offsetLeft
+      let offsetTop = e.target.offsetTop
+
+      if (e.target.nodeName == 'SPAN') {
+        offsetLeft = e.target.offsetParent.offsetLeft
+        offsetTop = e.target.offsetParent.offsetTop
+      }
+
+      let x = e.clientX - offsetLeft
+      let y = e.clientY - offsetTop
+
+      let ripple = document.createElement('span')
+      ripple.style.left = x + 'px'
+      ripple.style.top = y + 'px'
+
+      btn.appendChild(ripple)
+
+      setTimeout(() => {
+        ripple.remove()
+      }, 1000)
+    })
+  </script>
+</html>
