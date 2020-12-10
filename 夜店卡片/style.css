@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #2d3436;
+}
+
+.night-card {
+  position: relative;
+  width: 40vw;
+  padding: 10px 30px;
+  color: #ffffff;
+  background-color: #2d3436;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+p {
+  font-size: 14px;
+  line-height: 26px;
+  padding-top: 24px;
+  text-indent: 2em;
+}
+
+.night-card::before,
+.night-card::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background-image: linear-gradient(to top right, #b92b27, #2d3436, #1565c0);
+  z-index: -1;
+}
+
+.night-card::after {
+  filter: blur(20px);
+}
