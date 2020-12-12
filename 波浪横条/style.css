@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  perspective: 1000px;
+  transform-style: perserve-3d;
+}
+
+.container {
+  width: 500px;
+  height: 200px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  perspective: 1000px;
+  transform-style: preserve-3d;
+
+  transform: rotateX(45deg);
+}
+
+.fence {
+  width: 8px;
+  height: 200px;
+  background-color: orange;
+  border-radius: 8px;
+  animation: animate 1s ease-in-out infinite alternate both;
+}
+
+@keyframes animate {
+  from {
+    transform: translateZ(30px);
+  }
+
+  to {
+    transform: translateZ(-30px);
+  }
+}
+.fence:nth-child(1) {
+  animation-delay: 0s;
+}
+.fence:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.fence:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.fence:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.fence:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.fence:nth-child(6) {
+  animation-delay: 1s;
+}
+.fence:nth-child(7) {
+  animation-delay: 1.2s;
+}
+.fence:nth-child(8) {
+  animation-delay: 1.4s;
+}
