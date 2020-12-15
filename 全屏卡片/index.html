@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>presto</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="book">
+        <div class="book__cover">
+          <div class="header-img">
+            <div class="overlay"></div>
+          </div>
+          <div class="title-wrapper">
+            <h1 class="title">Hello World</h1>
+          </div>
+          <p class="book__cover-exerpt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            veniam natus dolores expedita numquam nihil nulla? Eos nemo velit
+            consectetur alias perferendis! Nihil, architecto quaerat est commodi
+            voluptates maxime! Unde.
+            <br /><br />
+            <span class="social">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-linkedin"></i>
+              <i class="fab fa-instagram"></i>
+            </span>
+          </p>
+        </div>
+        <div class="book__content">
+          <p>
+            <span class="drop-cap">O</span>Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Cumque explicabo maxime ut eos quod
+            officiis magnam porro eligendi quas earum, autem mollitia corrupti
+            nulla alias temporibus. Dolores vero porro cum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+            placeat rerum amet delectus exercitationem voluptas, odit dolore
+            omnis eveniet hic corporis id saepe architecto blanditiis magnam
+            vero optio veniam in.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+            placeat rerum amet delectus exercitationem voluptas, odit dolore
+            omnis eveniet hic corporis id saepe architecto blanditiis magnam
+            vero optio veniam in.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+            placeat rerum amet delectus exercitationem voluptas, odit dolore
+            omnis eveniet hic corporis id saepe architecto blanditiis magnam
+            vero optio veniam in.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+            placeat rerum amet delectus exercitationem voluptas, odit dolore
+            omnis eveniet hic corporis id saepe architecto blanditiis magnam
+            vero optio veniam in.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let $book = document.querySelector('.book')
+    $book.addEventListener('click', e => {
+      $book.classList.toggle('book--expanded')
+    })
+  </script>
+</html>
