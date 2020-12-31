@@ -1,0 +1,3 @@
+@mixin shaodw($level: 10) {
+  box-shadow: 0 0.1px * $level 0.4px * $level rgba(12, 12, 13, 0.1);
+}
