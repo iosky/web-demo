@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger {
+  display: block;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background-color: #eee;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.hamburger > .line {
+  display: block;
+  position: absolute;
+  height: 4px;
+  left: 8px;
+  right: 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  /* 回到默认状态时，先进行rotate，执行完成之后，再进行top和bottom的变换 */
+  transition: transform 3s ease-in-out, top 2s 3s ease-in-out,
+    bottom 2s 3s ease-in-out;
+}
+
+.hamburger > .line.top {
+  top: 15px;
+}
+
+.hamburger > .line.bottom {
+  bottom: 15px;
+}
+
+.hamburger.active > .line {
+  /* 在进行变换时，先进行top和Bottom的变换，然后再进行rotate */
+  transition: top 2s ease-in-out, bottom 2s ease-in-out,
+    transform 3s 2s ease-in-out;
+}
+
+.hamburger.active > .line.top {
+  top: calc(50% - 2px);
+  transform: rotateZ(45deg);
+}
+
+.hamburger.active > .line.bottom {
+  bottom: calc(50% - 2px);
+  transform: rotateZ(-45deg);
+}
